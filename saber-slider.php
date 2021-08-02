@@ -26,7 +26,8 @@ class Plugin {
 
 	public function __construct() {
 
-		require_once( 'saberslider/saberslider.php' );
+		require_once( 'blocks/saberslider/saberslider.php' );
+		require_once( 'blocks/saberslide/saberslide.php' );
 
 		add_action( 'wp_enqueue_scripts', function() {
 

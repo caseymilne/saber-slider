@@ -25,7 +25,7 @@ import save from './save';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
-registerBlockType( 'create-block/saberslider', {
+registerBlockType( 'saber-slider/slider', {
 	/**
 	 * @see ./edit.js
 	 */

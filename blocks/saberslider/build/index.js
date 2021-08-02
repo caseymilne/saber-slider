@@ -272,15 +272,13 @@ function Edit({
   isSelected,
   setAttributes
 }) {
+  const ALLOWED_BLOCKS = ['saber-slider/slide'];
   return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", Object(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__["useBlockProps"])(), attributes.message && !isSelected ? Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", null, attributes.message) : Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["Placeholder"], {
-    label: "Gutenpride Block",
-    instructions: "Add your message"
-  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["TextControl"], {
-    value: attributes.message,
-    onChange: val => setAttributes({
-      message: val
-    })
-  }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_components_SaberSlide_js__WEBPACK_IMPORTED_MODULE_5__["default"], null), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_components_SaberSlide_js__WEBPACK_IMPORTED_MODULE_5__["default"], null), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_components_SaberSlide_js__WEBPACK_IMPORTED_MODULE_5__["default"], null)));
+    label: "Saber Slider",
+    instructions: "Add slides to your new slider."
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__["InnerBlocks"], {
+    allowedBlocks: ALLOWED_BLOCKS
+  })));
 }
 
 /***/ }),
@@ -340,7 +338,7 @@ __webpack_require__.r(__webpack_exports__);
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
 
-Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])('create-block/saberslider', {
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])('saber-slider/slider', {
   /**
    * @see ./edit.js
    */
@@ -372,19 +370,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
 
 
-/**
- * Retrieves the translation of text.
- *
- * @see https://developer.wordpress.org/block-editor/packages/packages-i18n/
- */
-
-/**
- * React hook that is used to mark the block wrapper element.
- * It provides all the necessary props like the class name.
- *
- * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
- */
-
 
 /**
  * The save function defines the way in which the different attributes should
@@ -403,13 +388,7 @@ function save() {
     class: "splide__track"
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("ul", {
     class: "splide__list"
-  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("li", {
-    class: "splide__slide"
-  }, "Slide 01"), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("li", {
-    class: "splide__slide"
-  }, "Slide 02"), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("li", {
-    class: "splide__slide"
-  }, "Slide 03")))));
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["InnerBlocks"].Content, null)))));
 }
 
 /***/ }),

@@ -24,8 +24,9 @@ import { useBlockProps } from '@wordpress/block-editor';
  */
 export default function save() {
 	return (
-		<p { ...useBlockProps.save() }>
-			{ __( 'Saberslide – hello from the saved content!', 'saberslide' ) }
-		</p>
+		<li class="splide__slide">
+			<h3>Slide Heading</h3>
+			<p>Slide paragraph content...</p>
+		</li>
 	);
 }

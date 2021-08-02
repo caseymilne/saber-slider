@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       Saberslider
+ * Plugin Name:       Saber Slider Block
  * Description:       Example block written with ESNext standard and JSX support – build step required.
  * Requires at least: 5.8
  * Requires PHP:      7.0
@@ -8,9 +8,9 @@
  * Author:            The WordPress Contributors
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       saberslider
+ * Text Domain:       saber-slider-block
  *
- * @package           create-block
+ * @package           saber-slider
  */
 
 /**

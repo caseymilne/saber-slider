@@ -1,17 +1,5 @@
-/**
- * Retrieves the translation of text.
- *
- * @see https://developer.wordpress.org/block-editor/packages/packages-i18n/
- */
 import { __ } from '@wordpress/i18n';
-
-/**
- * React hook that is used to mark the block wrapper element.
- * It provides all the necessary props like the class name.
- *
- * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
- */
-import { useBlockProps } from '@wordpress/block-editor';
+import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
 
 /**
  * The save function defines the way in which the different attributes should
@@ -28,9 +16,7 @@ export default function save() {
 			<div class="splide">
 				<div class="splide__track">
 					<ul class="splide__list">
-						<li class="splide__slide">Slide 01</li>
-						<li class="splide__slide">Slide 02</li>
-						<li class="splide__slide">Slide 03</li>
+						<InnerBlocks.Content />
 					</ul>
 				</div>
 			</div>

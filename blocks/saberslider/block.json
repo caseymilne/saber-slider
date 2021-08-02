@@ -1,15 +1,15 @@
 {
 	"apiVersion": 2,
-	"name": "create-block/saberslider",
+	"name": "saber-slider/slider",
 	"version": "0.1.0",
-	"title": "Saberslider",
+	"title": "Slider",
 	"category": "widgets",
 	"icon": "smiley",
-	"description": "Example block written with ESNext standard and JSX support – build step required.",
+	"description": "A versatile and stylish content slider with a friendly UX.",
 	"supports": {
 		"html": false
 	},
-	"textdomain": "saberslider",
+	"textdomain": "saber-slider",
 	"editorScript": "file:./build/index.js",
 	"editorStyle": "file:./build/index.css",
 	"style": "file:./build/style-index.css"
