@@ -4,7 +4,7 @@
 	"version": "0.1.0",
 	"title": "Slider",
 	"category": "widgets",
-	"icon": "smiley",
+	"icon": "admin-page",
 	"description": "A versatile and stylish content slider with a friendly UX.",
 	"supports": {
 		"html": false

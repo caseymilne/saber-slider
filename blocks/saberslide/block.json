@@ -4,7 +4,7 @@
 	"version": "0.1.0",
 	"title": "Slide",
 	"category": "widgets",
-	"icon": "smiley",
+	"icon": "edit-page",
 	"description": "A single slide for your slider.",
 	"supports": {
 		"html": false

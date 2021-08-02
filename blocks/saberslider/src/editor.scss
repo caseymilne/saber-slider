@@ -4,6 +4,18 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-.wp-block-create-block-saberslider {
-	border: 1px dotted #f00;
+.wp-block-saber-slider-slider {
+
+	border: 1px solid red;
+	padding: 0;
+	margin: 0;
+
+}
+
+.wp-block-saber-slider-slider .block-editor-inner-blocks {
+
+	width: 100%;
+	padding: 0;
+	margin: 0;
+
 }
