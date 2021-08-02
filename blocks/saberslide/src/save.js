@@ -11,7 +11,7 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
  */
-import { useBlockProps } from '@wordpress/block-editor';
+import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
 
 /**
  * The save function defines the way in which the different attributes should
@@ -27,6 +27,7 @@ export default function save() {
 		<li class="splide__slide">
 			<h3>Slide Heading</h3>
 			<p>Slide paragraph content...</p>
+			<InnerBlocks.Content />
 		</li>
 	);
 }

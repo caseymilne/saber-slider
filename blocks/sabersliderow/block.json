@@ -1,15 +1,15 @@
 {
 	"apiVersion": 2,
-	"name": "create-block/sabersliderow",
+	"name": "saber-slider/slide-row",
 	"version": "0.1.0",
-	"title": "Sabersliderow",
+	"title": "Slide Row",
 	"category": "widgets",
 	"icon": "smiley",
-	"description": "Example block written with ESNext standard and JSX support – build step required.",
+	"description": "Slider row block.",
 	"supports": {
 		"html": false
 	},
-	"textdomain": "sabersliderow",
+	"textdomain": "saber-slider",
 	"editorScript": "file:./build/index.js",
 	"editorStyle": "file:./build/index.css",
 	"style": "file:./build/style-index.css"

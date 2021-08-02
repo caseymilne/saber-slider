@@ -28,6 +28,7 @@ class Plugin {
 
 		require_once( 'blocks/saberslider/saberslider.php' );
 		require_once( 'blocks/saberslide/saberslide.php' );
+		require_once( 'blocks/sabersliderow/sabersliderow.php' );
 
 		add_action( 'wp_enqueue_scripts', function() {
 
