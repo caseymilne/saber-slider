@@ -1,14 +1,12 @@
 import { __ } from '@wordpress/i18n';
-import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
-import './editor.scss';
+import { useBlockProps } from '@wordpress/block-editor';
 
 export default function Edit() {
 
-	const ALLOWED_BLOCKS = [ 'saber-slider/slide-row' ];
-
 	return (
 		<li { ...useBlockProps() }>
-			<InnerBlocks allowedBlocks={ ALLOWED_BLOCKS } />
+			EDITOR RENDER
 		</li>
 	);
+	
 }

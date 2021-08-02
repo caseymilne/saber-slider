@@ -28,7 +28,6 @@ class Plugin {
 
 		require_once( 'blocks/saberslider/saberslider.php' );
 		require_once( 'blocks/saberslide/saberslide.php' );
-		require_once( 'blocks/sabersliderow/sabersliderow.php' );
 
 		add_action( 'wp_enqueue_scripts', function() {
 
@@ -86,8 +85,27 @@ class Plugin {
 
 		});
 
+		// Register block patterns.
+		add_action( 'init', function() {
+
+			// $this->registerBlockPatterns();
+
+		});
+
 	}
 
+	function registerBlockPatterns() {
+
+		register_block_pattern(
+			'saber-slider/slide-single-image',
+			array(
+				'title'       => __( 'Single Image Slide', 'saber-slider' ),
+				'description' => _x( 'Simple slide to display a single image.', 'Block pattern description', 'saber-slider' ),
+				'content'     => '<!-- wp:image --><figure class="wp-block-image"><img alt=""/></figure><!-- /wp:image -->',
+			)
+		);
+
+	}
 
 }
 

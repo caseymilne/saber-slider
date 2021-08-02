@@ -173,59 +173,23 @@ __webpack_require__.r(__webpack_exports__);
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/components/SaberSlide.js":
-/*!**************************************!*\
-  !*** ./src/components/SaberSlide.js ***!
-  \**************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return SaberSlide; });
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
-
-function SaberSlide() {
-  return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", null, "This is a single saberslide.");
-}
-
-/***/ }),
-
-/***/ "./src/components/SaberSlideRow.js":
+/***/ "./src/components/ContextHeader.js":
 /*!*****************************************!*\
-  !*** ./src/components/SaberSlideRow.js ***!
+  !*** ./src/components/ContextHeader.js ***!
   \*****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return SaberSlideRow; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ContextHeader; });
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
 
-function SaberSlideRow() {
-  return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", null, "This is a single saberslide ROW.");
-}
-
-/***/ }),
-
-/***/ "./src/components/SaberSlider.js":
-/*!***************************************!*\
-  !*** ./src/components/SaberSlider.js ***!
-  \***************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return SaberSlider; });
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
-
-function SaberSlider() {
-  return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", null, "This is a single saberslideRRRRR.");
+function ContextHeader() {
+  return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+    class: "saber-slider-context-header"
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("h5", null, "Saber Slider Block"));
 }
 
 /***/ }),
@@ -242,29 +206,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Edit; });
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_SaberSlider_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/SaberSlider.js */ "./src/components/SaberSlider.js");
-/* harmony import */ var _components_SaberSlide_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/SaberSlide.js */ "./src/components/SaberSlide.js");
-/* harmony import */ var _components_SaberSlideRow_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/SaberSlideRow.js */ "./src/components/SaberSlideRow.js");
-/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./editor.scss */ "./src/editor.scss");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_ContextHeader_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/ContextHeader.js */ "./src/components/ContextHeader.js");
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./editor.scss */ "./src/editor.scss");
 
 
 
-
-
-
-
-/**
- * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
- * Those files can contain any CSS code that gets applied to the editor.
- *
- * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
- */
 
 
 function Edit({
@@ -273,10 +223,9 @@ function Edit({
   setAttributes
 }) {
   const ALLOWED_BLOCKS = ['saber-slider/slide'];
-  return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", Object(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__["useBlockProps"])(), attributes.message && !isSelected ? Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", null, attributes.message) : Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__["Placeholder"], {
-    label: "Saber Slider",
-    instructions: "Add slides to your new slider."
-  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__["InnerBlocks"], {
+  return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", Object(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["useBlockProps"])(), !isSelected ? Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(React.Fragment, null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_components_ContextHeader_js__WEBPACK_IMPORTED_MODULE_3__["default"], null), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["InnerBlocks"], {
+    allowedBlocks: ALLOWED_BLOCKS
+  })) : Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(React.Fragment, null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_components_ContextHeader_js__WEBPACK_IMPORTED_MODULE_3__["default"], null), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["InnerBlocks"], {
     allowedBlocks: ALLOWED_BLOCKS
   })));
 }
@@ -311,42 +260,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./src/style.scss");
 /* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit */ "./src/edit.js");
 /* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./save */ "./src/save.js");
-/**
- * Registers a new block provided a unique name and an object defining its behavior.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
- */
-
-/**
- * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
- * All files containing `style` keyword are bundled together. The code used
- * gets applied both to the front of your site and to the editor.
- *
- * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
- */
-
-
-/**
- * Internal dependencies
- */
 
 
 
-/**
- * Every block starts by registering a new block type definition.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
- */
 
 Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])('saber-slider/slider', {
-  /**
-   * @see ./edit.js
-   */
   edit: _edit__WEBPACK_IMPORTED_MODULE_2__["default"],
-
-  /**
-   * @see ./save.js
-   */
   save: _save__WEBPACK_IMPORTED_MODULE_3__["default"]
 });
 
@@ -368,18 +287,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_ContextHeader_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/ContextHeader.js */ "./src/components/ContextHeader.js");
 
 
 
-/**
- * The save function defines the way in which the different attributes should
- * be combined into the final markup, which is then serialized by the block
- * editor into `post_content`.
- *
- * @see https://developer.wordpress.org/block-editor/developers/block-api/block-edit-save/#save
- *
- * @return {WPElement} Element to render.
- */
 
 function save() {
   return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["useBlockProps"].save(), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
@@ -412,17 +323,6 @@ function save() {
 /***/ (function(module, exports) {
 
 (function() { module.exports = window["wp"]["blocks"]; }());
-
-/***/ }),
-
-/***/ "@wordpress/components":
-/*!************************************!*\
-  !*** external ["wp","components"] ***!
-  \************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-(function() { module.exports = window["wp"]["components"]; }());
 
 /***/ }),
 

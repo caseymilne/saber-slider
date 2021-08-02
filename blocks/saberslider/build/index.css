@@ -4,9 +4,19 @@
  * Replace them with your own styles or remove the file completely.
  */
 .wp-block-saber-slider-slider {
-  border: 1px solid red;
-  padding: 0;
+  background-color: #555;
+  padding: 0 10px 10px 10px;
   margin: 0;
+}
+
+.wp-block-saber-slider-slider .saber-slider-context-header {
+  padding: 0;
+}
+.wp-block-saber-slider-slider .saber-slider-context-header h5 {
+  margin: 0;
+  color: #DDD !important;
+  font-weight: 500;
+  font-size: 1em;
 }
 
 .wp-block-saber-slider-slider .block-editor-inner-blocks {
