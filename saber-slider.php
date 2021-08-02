@@ -32,11 +32,55 @@ class Plugin {
 
 			wp_enqueue_script(
 				'saber-slider-splide-jsmin',
-				SABER_SLIDER_URL . '/node_modules/@slidejs/splide/dist/js/slide.min.js',
+				SABER_SLIDER_URL . 'node_modules/@splidejs/splide/dist/js/splide.min.js',
 				array(),
 				time(),
 				true
 			);
+
+			/* Plugin init splide instances. */
+			wp_enqueue_script(
+				'saber-slider-initjs',
+				SABER_SLIDER_URL . 'init.js',
+				array( 'saber-slider-splide-jsmin' ),
+				time(),
+				true
+			);
+
+			wp_enqueue_style(
+				'saber-slider-splide-css-core',
+				SABER_SLIDER_URL . 'node_modules/@splidejs/splide/dist/css/splide-core.min.css',
+				array(),
+				time()
+			);
+
+			/*
+			// Splide theme default.
+			wp_enqueue_style(
+				'saber-slider-splide-css-theme-default',
+				SABER_SLIDER_URL . 'node_modules/@splidejs/splide/dist/css/themes/splide-default.min.css',
+				array( 'saber-slider-splide-css-core' ),
+				time()
+			);
+			*/
+
+			// Splide theme sky blue.
+			wp_enqueue_style(
+				'saber-slider-splide-css-theme-default',
+				SABER_SLIDER_URL . 'node_modules/@splidejs/splide/dist/css/themes/splide-skyblue.min.css',
+				array( 'saber-slider-splide-css-core' ),
+				time()
+			);
+
+			/*
+			// Splide theme sea green.
+			wp_enqueue_style(
+				'saber-slider-splide-css-theme-default',
+				SABER_SLIDER_URL . 'node_modules/@splidejs/splide/dist/css/themes/splide-sea-green.min.css',
+				array( 'saber-slider-splide-css-core' ),
+				time()
+			);
+			*/
 
 		});
 
