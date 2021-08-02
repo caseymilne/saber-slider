@@ -24,11 +24,11 @@ import { useBlockProps } from '@wordpress/block-editor';
  */
 export default function save() {
 	return (
-		<div { ...useBlockProps.save() }>
+		<p { ...useBlockProps.save() }>
 			{ __(
-				'Saberslider – hello from the saved content!',
-				'saberslider'
+				'Saberslidecol – hello from the saved content!',
+				'saberslidecol'
 			) }
-		</div>
+		</p>
 	);
 }
