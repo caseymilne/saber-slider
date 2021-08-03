@@ -198,6 +198,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./editor.scss */ "./src/editor.scss");
 
 
+/*
+ * See https://awhitepixel.com/blog/wordpress-gutenberg-add-image-select-custom-block/
+ */
+
 
 
 
@@ -209,7 +213,6 @@ function Edit({
   setAttributes,
   media
 }) {
-  console.log(media);
   const divStyles = {
     backgroundColor: attributes.backgroundColor
   };
@@ -218,7 +221,10 @@ function Edit({
 
   const onUpdateImage = image => {
     setAttributes({
-      bgImageId: image.id
+      image: {
+        id: image.id,
+        url: image.url
+      }
     });
   };
 
@@ -230,49 +236,30 @@ function Edit({
       backgroundColor: value.hex
     }),
     disableAlpha: true
-  }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_5__["MediaUploadCheck"], {
+  })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_5__["MediaUploadCheck"], {
     fallback: instructions
   }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_5__["MediaUpload"], {
-    title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Background image', 'image-selector-example'),
+    title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Slide Image', 'saber-slider'),
     onSelect: onUpdateImage,
     allowedTypes: ALLOWED_MEDIA_TYPES,
-    value: attributes.bgImageId,
+    value: attributes.image.id,
     render: ({
       open
     }) => Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["Button"], {
       className: 'editor-post-featured-image__toggle',
       onClick: open
-    }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Set background image', 'image-selector-example'))
-  }))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_5__["MediaUploadCheck"], {
-    fallback: instructions
-  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_5__["MediaUpload"], {
-    title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Background image', 'image-selector-example'),
-    onSelect: onUpdateImage,
-    allowedTypes: ALLOWED_MEDIA_TYPES,
-    value: attributes.bgImageId,
-    render: ({
-      open
-    }) => Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__["Button"], {
-      className: 'editor-post-featured-image__toggle',
-      onClick: open
-    }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Set background image', 'image-selector-example'))
+    }, Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Set / Change Slide Image', 'saber-slider'))
   })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
     style: divStyles
-  }, !!attributes.bgImageId && media && Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("img", {
+  }, media != undefined && Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("img", {
     src: media.source_url
-  }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("h3", null, "Test 1234"), "asfdsaf sdafdsa fsdafsda fsdafds"));
+  })));
 }
 const applyWithSelect = Object(_wordpress_data__WEBPACK_IMPORTED_MODULE_2__["withSelect"])((select, props) => {
-  // media is the name of the returned value
   return {
-    media: props.attributes.bgImageId ? select('core').getMedia(props.attributes.bgImageId) : undefined
+    media: props.attributes.image.id ? select('core').getMedia(props.attributes.image.id) : undefined
   };
 });
-/**
-* Use compose to return the result of withSelect to Edit({...})
-* @see https://developer.wordpress.org/block-editor/packages/packages-compose/
-*/
-
 /* harmony default export */ __webpack_exports__["default"] = (Object(_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__["compose"])(applyWithSelect)(Edit));
 
 /***/ }),
@@ -317,13 +304,12 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])('sab
       type: 'string',
       default: '#EBEBEB'
     },
-    bgImageId: {
-      type: 'number',
-      default: 0
-    },
     image: {
-      type: 'string',
-      default: ''
+      type: 'object',
+      default: {
+        id: 0,
+        url: ''
+      }
     }
   }
 });
@@ -348,32 +334,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
 
 
-/**
- * Retrieves the translation of text.
- *
- * @see https://developer.wordpress.org/block-editor/packages/packages-i18n/
- */
 
-/**
- * React hook that is used to mark the block wrapper element.
- * It provides all the necessary props like the class name.
- *
- * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
- */
-
-
-/**
- * The save function defines the way in which the different attributes should
- * be combined into the final markup, which is then serialized by the block
- * editor into `post_content`.
- *
- * @see https://developer.wordpress.org/block-editor/developers/block-api/block-edit-save/#save
- *
- * @return {WPElement} Element to render.
- */
-
-function save() {
-  return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("p", _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["useBlockProps"].save(), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Image – hello from the saved content!', 'image'));
+function save({
+  attributes
+}) {
+  const {
+    image
+  } = attributes;
+  return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("li", {
+    class: "splide__slide"
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("img", {
+    src: image.url
+  }));
 }
 
 /***/ }),

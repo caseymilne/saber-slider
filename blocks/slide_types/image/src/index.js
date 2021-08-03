@@ -12,13 +12,12 @@ registerBlockType( 'saber-slider/image', {
 			type: 'string',
 			default: '#EBEBEB'
 		},
-		bgImageId: {
-			type: 'number',
-			default: 0
-		},
 		image: {
-			type: 'string',
-			default: ''
+			type: 'object',
+			default: {
+				id: 0,
+				url: ''
+			}
 		}
 	}
 } );

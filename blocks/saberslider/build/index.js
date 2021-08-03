@@ -226,7 +226,7 @@ function Edit({
   isSelected,
   setAttributes
 }) {
-  const ALLOWED_BLOCKS = ['saber-slider/slide']; // Setup storage for color picker.
+  const ALLOWED_BLOCKS = ['saber-slider/slide', 'saber-slider/image']; // Setup storage for color picker.
 
   const [color, setColor] = Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["useState"])('#f00');
   return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", Object(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["useBlockProps"])(), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["InspectorControls"], {

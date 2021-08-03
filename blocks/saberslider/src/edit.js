@@ -8,7 +8,10 @@ import './editor.scss';
 
 export default function Edit( { attributes, isSelected, setAttributes } ) {
 
-	const ALLOWED_BLOCKS = [ 'saber-slider/slide' ];
+	const ALLOWED_BLOCKS = [
+		'saber-slider/slide',
+		'saber-slider/image' 
+	];
 
 	// Setup storage for color picker.
 	const [ color, setColor ] = useState( '#f00' );
