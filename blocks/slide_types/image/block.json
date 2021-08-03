@@ -1,0 +1,16 @@
+{
+	"apiVersion": 2,
+	"name": "saber-slider/image",
+	"version": "0.1.0",
+	"title": "Image Slide",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "Image slide type for Saber Slider.",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "saber-slider",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}
