@@ -1,5 +1,8 @@
 import { __ } from '@wordpress/i18n';
+
 import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
+import { ColorPicker } from '@wordpress/components';
+
 import './editor.scss';
 
 export default function Edit() {
@@ -8,7 +11,9 @@ export default function Edit() {
 
 	return (
 		<li { ...useBlockProps() }>
+
 			<InnerBlocks allowedBlocks={ ALLOWED_BLOCKS } />
+
 		</li>
 	);
 
