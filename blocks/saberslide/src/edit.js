@@ -4,7 +4,7 @@ import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
 import { ColorPicker } from '@wordpress/components';
 
 import './editor.scss';
-
+ 
 export default function Edit() {
 
 	const ALLOWED_BLOCKS = [ 'core/columns' ];

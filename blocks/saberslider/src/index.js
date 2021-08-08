@@ -6,5 +6,19 @@ import save from './save';
 
 registerBlockType( 'saber-slider/slider', {
 	edit: Edit,
-	save: save
+	save: save,
+	attributes: {
+		splideTheme: {
+			type: 'string',
+			default: 'sea-blue'
+		},
+		sliderOptionType: {
+			type: 'string',
+			default: 'slide'
+		},
+		sliderOptionHeight: {
+			type: 'number',
+			default: 500
+		}
+	}
 });
